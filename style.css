@@ -1,0 +1,432 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0a0a;
+    color: #eeeeee;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+
+    background-image:
+        url("images/brothers.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.88)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    padding: 30px;
+}
+
+.eyebrow {
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #aaa;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 120px);
+
+    font-weight: 400;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: #777;
+    font-style: italic;
+}
+
+.hero-line {
+    font-size: 23px;
+
+    line-height: 1.7;
+
+    color: #ddd;
+
+    font-style: italic;
+}
+
+.scroll {
+    margin-top: 80px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #888;
+}
+
+
+/* COMMON */
+
+section {
+    padding: 130px 10%;
+}
+
+.section-number {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #777;
+
+    margin-bottom: 35px;
+}
+
+
+/* INTRO */
+
+.intro {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.intro h2 {
+    font-size: clamp(35px, 5vw, 65px);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    margin-bottom: 45px;
+}
+
+.description {
+    max-width: 650px;
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+    color: #999;
+}
+
+
+/* DARK MESSAGE */
+
+.dark-section {
+    background: #111111;
+
+    min-height: 700px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.message-container {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.message-container h2 {
+    font-size: clamp(35px, 5vw, 60px);
+
+    font-weight: 400;
+
+    margin-bottom: 60px;
+}
+
+.message-container p:not(.section-number) {
+    max-width: 700px;
+
+    font-size: 18px;
+
+    line-height: 2;
+
+    color: #aaa;
+
+    margin-bottom: 30px;
+}
+
+.message-container strong {
+    color: #ddd;
+
+    font-weight: 400;
+}
+
+
+/* IMAGE */
+
+.image-section {
+    height: 80vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.3),
+            rgba(0,0,0,0.7)
+        ),
+        url("images/memory.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: flex-end;
+}
+
+.image-caption {
+    max-width: 800px;
+
+    margin: 0 auto 80px;
+
+    text-align: center;
+
+    width: 100%;
+
+    font-size: 28px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+}
+
+
+/* DEEP MESSAGE */
+
+.deep-message {
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.deep-message h2 {
+    font-size: clamp(38px, 6vw, 70px);
+
+    font-weight: 400;
+
+    margin-bottom: 70px;
+}
+
+.text {
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.text p {
+    font-size: 18px;
+
+    line-height: 2;
+
+    color: #999;
+
+    margin-bottom: 25px;
+}
+
+.text h3 {
+    margin-top: 55px;
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+
+/* MEMORY */
+
+.memory {
+    background: #111;
+}
+
+.memory h2 {
+    font-size: clamp(40px, 6vw, 75px);
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    margin-bottom: 70px;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    filter: grayscale(100%);
+
+    transition: 0.6s;
+}
+
+.gallery img:hover {
+    filter: grayscale(0%);
+
+    transform: scale(1.02);
+}
+
+
+/* FINAL */
+
+.final {
+    min-height: 80vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.final h2 {
+    font-size: clamp(50px, 8vw, 100px);
+
+    font-weight: 400;
+
+    margin-bottom: 40px;
+}
+
+.final-message {
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    color: #aaa;
+
+    font-style: italic;
+}
+
+.line {
+    width: 60px;
+
+    height: 1px;
+
+    background: #555;
+
+    margin: 50px 0 25px;
+}
+
+.small {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #666;
+
+    text-transform: uppercase;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 1px solid #1c1c1c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #555;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 90px 7%;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 400px;
+    }
+
+    .image-caption {
+        font-size: 21px;
+
+        padding: 20px;
+    }
+}
+```
